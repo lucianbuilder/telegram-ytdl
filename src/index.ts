@@ -96,6 +96,8 @@ bot.on("message:text").on("::url", async (ctx, next) => {
 			const info = await getInfo(url.text, [
 				"-f",
 				"b",
+				"--cookies",
+                                "/app/storage/cookies.txt",
 				"--no-playlist",
 				...additionalArgs,
 			])
